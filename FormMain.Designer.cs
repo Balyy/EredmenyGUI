@@ -1,7 +1,7 @@
 ﻿
 namespace EredmenyGUI
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,7 @@ namespace EredmenyGUI
         private void InitializeComponent()
         {
             this.dataGridViewEredmeny = new System.Windows.Forms.DataGridView();
+            this.openFileDialogEredmeny = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEredmeny)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,13 +43,18 @@ namespace EredmenyGUI
             this.dataGridViewEredmeny.Size = new System.Drawing.Size(800, 450);
             this.dataGridViewEredmeny.TabIndex = 0;
             // 
-            // Form1
+            // openFileDialogEredmeny
+            // 
+            this.openFileDialogEredmeny.FileName = "openFileDialogEredmeny";
+            this.openFileDialogEredmeny.Filter = "Text files|*.txt|All files|*.*";
+            // 
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridViewEredmeny);
-            this.Name = "Form1";
+            this.Name = "FormMain";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEredmeny)).EndInit();
@@ -59,6 +65,7 @@ namespace EredmenyGUI
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridViewEredmeny;
+        private System.Windows.Forms.OpenFileDialog openFileDialogEredmeny;
     }
 }
 
