@@ -19,7 +19,27 @@ namespace EredmenyGUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //EredmenyRepository.Path = "eredmenyek.txt";
+            //dataGridViewEredmeny.DataSource = EredmenyRepository.FindAll();
+        }
 
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialogEredmeny.ShowDialog() == DialogResult.OK)
+            {
+                EredmenyRepository.Path = openFileDialogEredmeny.FileName;
+                dataGridViewEredmeny.DataSource = EredmenyRepository.FindAll();
+            }
+        }
+
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
